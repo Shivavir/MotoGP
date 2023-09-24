@@ -1,0 +1,420 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.container-image {
+  max-width: 800px;
+  width: 100%;
+}
+
+.container-image img {
+  max-width: 800px;
+  width: 100%;
+}
+
+
+
+.container-b {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-text {
+  padding: 20px 10px;
+}
+
+.price-container {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+}
+
+.price-container span {
+  font-size: 12px;
+}
+
+.price-container i {
+  color: #FEC700;
+}
+
+.btn {
+  padding: 10px;
+  outline: none;
+  margin-bottom: 16px;
+  background-color: #ff5c33;
+  color: white;
+  border: none;
+  transition: .5s all;
+  cursor: pointer;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 10px;
+  margin-right: 9px;
+  justify-content: space-between;
+}
+
+
+.btn a {
+  text-decoration: none;
+  color: white;
+}
+
+.container h2 {
+  text-align: left;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  margin-left: 9px;
+}
+
+.container h5 {
+  text-align: left;
+  margin-top: 4px;
+  margin-bottom: 5px;
+  font-family: "Lato", sans-serif;
+  margin-left: 9px;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  margin-top: 7px;
+}
+
+
+/* ==============.======================================= */
+
+.mapmenucontainer {
+  display: flex;
+}
+
+.leftmenucontainer {
+  max-width: 350px;
+  width: 100%;
+  height: 100vh;
+  border-right: 1px solid black;
+  overflow-x: scroll;
+
+}
+
+.leftmenucontainer::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.leftmenucontainer {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.leftmenucontainer-text {
+  padding: 20px;
+}
+
+/* .leftmenu .menu {
+  padding: 10px;
+  margin-bottom: 10px;
+} */
+.map-image {
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
+}
+
+.map-image img {
+  max-width: 600px;
+  width: 100%;
+}
+
+
+.faq-question {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff0f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fa-chevron-down {
+    transition: .5s;
+}
+
+
+.faq-answer ul {
+  padding: 10px;
+}
+
+.faq-answer ul li {
+  list-style-type: none;
+}
+
+.details {
+  padding: 10px;
+}
+
+.faq-answer {
+  display: none;
+}
+
+.answer-heading {
+  background-color: rgb(222, 222, 222);
+  padding: 10px;
+}
+
+
+.btnforbooking {
+    padding: 10px;
+    outline: none;
+    margin-bottom: 16px;
+    background-color: #ff5c33;
+    color: white;
+    border: none;
+    transition: .5s all;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-right: 9px;
+    justify-content: space-between;
+    margin-left: 10px;
+}
+
+.btnforbooking a {
+  text-decoration: none;
+  color: white;
+}
+
+.btndesign {
+
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.btndesign button {
+  border-radius: 50px;
+  height: 30px;
+  width: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff5c33;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+
+.seatpopup {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 500px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  max-width: 500px;
+  width: 100%;
+  padding: 10px 10px 0 10px;
+}
+
+.seatpopup img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.seatpopup p {
+  font-size: 15px;
+  background-color: #EEEEEE;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+
+.seatpopup a {
+  background-color: #ff5c33;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 700px) {
+  .mapmenucontainer {
+    flex-direction: column-reverse;
+  }
+
+  .leftmenucontainer {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    overflow-x: scroll;
+
+  }
+
+  .price-container {
+    flex-direction: column;
+    text-align: left;
+  }
+}
+
+/* signup page css */
+
+.signup-container h2 {
+  text-align: center;
+  margin-bottom: 7px;
+}
+
+.signup-container h5 {
+  text-align: center;
+  margin-bottom: 7px;
+  font: small;
+
+}
+
+.signup-container {
+  background-color: white smoke;
+  padding: 30px 20px;
+  border-radius: 8px;
+  display: flex;
+  max-width: 360px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 3rem;
+  flex-direction: column;
+  border: 1px solid #fb6d4a;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* text-align: center; */
+  transform: translate(-50%, -50%);
+}
+
+.signup-container a {
+  text-decoration: none;
+  margin-bottom: 16px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form input {
+  padding: 10px;
+  outline: none;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  border: 1px solid gray;
+}
+
+.submitbtn {
+  padding: 10px;
+  outline: none;
+  margin-bottom: 16px;
+  background-color: #fb6d4a;
+  color: white;
+  border: none;
+  outline: none;
+  transition: .5s all;
+  cursor: pointer;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+
+}
+
+.submitbtn:hover {
+  background-color: #ff5c33;
+}
+
+
+/* button color holding */
+.btndesign button.selected {
+  background-color: #ff5c33;
+}
+
+
+.seatdiv {
+  font-weight: bold;
+  border: 1px solid #ff5c33;
+  border-radius: 9px;
+}
+
+.footer_div {
+    display: flex;
+    height: 270px;
+    width: 100%;
+    background-color: rgb(124, 114, 114);
+    margin: auto;
+    padding-top: 35px;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 3rem;
+    flex-direction: column;
+}
+
+.footer_text a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.footer_text {
+    font-size: 25px;
+    color: white;
+    padding-left: 10px;
+}
+
+.footer_item img {
+    height: 110px;
+    width: 130px;
+}
+

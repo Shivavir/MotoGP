@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "MotoGP";
+    Layout = "~/Views/Shared/Master_Layout.cshtml";
+}
+<div class="container">
+    <div class="container-image">
+        <img src="~/Content/img/BharatGP-2023.jpg" />
+    </div>
+    <div class="container-text">
+        <div class="container-b">
+            <div>
+                <h3>MotoGP Bharat 2023</h3>
+                <p>Moto GP | 8hrs</p>
+            </div>
+            <button class="btn">
+                <a href="@Url.Action("MapMenu", "Home")">Book now</a>
+            </button>
+        </div>
+        <hr>
+        <div class="price-container">
+            <p>Fri 22 Sep 2023 - Sun 24 Sep 2023 | <b> 10 &dollar;</b><span> ownwards</span></p>
+            <p><i class="fa-solid fa-location-dot"></i> Buddha International Circuit: Greater Noida</p>
+        </div>
+        <button class="btn">
+            <a href="@Url.Action("TicketRegistration", "Home")">Sign Up</a>
+        </button>
+    </div>
+</div>
+
+<div class="footer_div">
+    <footer class="footer_item">
+        <p style="color: white; font-size: 65px; color: #ff5c33; margin-left: 20px; font-weight: bold:">MotoGP<img src="~/Content/img/logo2.png"/>
+        </p>
+        <hr style="margin-bottom: 25px; margin-top: 25px;"/>
+        <div class="footer_text">
+            &copy; All right reserved from 2023
+            <a href="@Url.Action("Index", "Home")">MotoGP</a>
+        </div> 
+    </footer>
+</div>

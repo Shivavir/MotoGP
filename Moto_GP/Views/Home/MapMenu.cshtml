@@ -1,0 +1,514 @@
+﻿
+@{
+    ViewBag.Title = "MapMenu";
+    Layout = "~/Views/Shared/Master_Layout.cshtml";
+}
+
+<div id="overlay" class="overlay">
+    <div class="seatpopup">
+        <h2>How many seats?</h2>
+        <img src="~/Content/img/seats01.png" />
+        <div class="btndesign">
+            <button class="seat-button1" data-seat="1">1</button>
+            <button class="seat-button2" data-seat="2">2</button>
+            <button class="seat-button3" data-seat="3">3</button>
+            <button class="seat-button4" data-seat="4">4</button>
+            <button class="seat-button5" data-seat="5">5</button>
+            <button class="seat-button6" data-seat="6">6</button>
+            <button class="seat-button7" data-seat="7">7</button>
+            <button class="seat-button8" data-seat="8">8</button>
+            <button class="seat-button9" data-seat="9">9</button>
+            <button class="seat-button10" data-seat="10">10</button>
+        </div>
+        <p>&#33; 1 is the minimum and 10 is the maximum quality of tickdets you can purchase for this event.</p>
+        <br>
+        @*<p id="priceSeat"> moto</p>*@
+        <div class="seatdiv" id="selectedSeats"></div>
+        @*<a href="@Url.Action("TicketRegistration", "Home")" id="closePopupButton">Confirm your seats</a>*@
+        <a href="#" id="closePopupButton">Proceed to payment</a>
+
+        <div id="selectedSeats"></div>
+    </div>
+</div>
+
+
+<div class="mapmenuwrapper">
+    <div class="mapmenucontainer">
+        <div class="leftmenucontainer">
+            <div class="leftmenucontainer-text">
+                <h3>MotoGP Bharat 2023</h3>
+                <span>Fri 22 Sep | 12:00 PM</span>
+                <p>Please select the category of your choice. It will get highlighted on the layout.</p>
+            </div>
+            <div class="leftmenu faq-container">
+                <div class="menu">
+                    <div class="faq-question">
+                        <span>10 &dollar;</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="answer-heading" >Picnic Stand North EB (10 &dollar;)</p>
+                        <p class="details">Details :</p>
+                        <ul>
+                            <li>&#10003; Early bird offer, limited quality</li>
+                            <li>&#10003; Valid for all three days of the event</li>
+                            <li>&#10003; Access to MotoGP, Moto2, Moto 3 Races</li>
+                            <li>&#10003; Lawn free seating</li>
+                            <li>&#10003; View of the first turn of the races</li>
+                        </ul>
+
+                        <button class="btnforbooking" data-rate="10$" id="openPopupButton">Book your 10 $ seat</button>
+                    </div>
+                </div>
+                <div class="menu">
+                    <div class="faq-question">
+                        <span>30 &dollar;</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="answer-heading" >Picnic Stand North (30 &dollar;)</p>
+                        <p class="details">Details :</p>
+                        <ul>
+                            <li>&#10003; Valid for all tree days of the event</li>
+                            <li>&#10003; Access to MotoGP, Moto 2, Moto 3 races</li>
+                            <li>&#10003; Lawn free seating</li>
+                            <li>&#10003; View of the first turn of the race</li>
+                        </ul>
+
+                        <p class="answer-heading">Natural Stand South (30 &dollar;)</p>
+                        <p class="details">Details :</p>
+                        <ul>
+                            <li>&#10003; Valid for all tree days of the event</li>
+                            <li>&#10003; Access to MotoGP, Moto 2, Moto 3 races</li>
+                            <li>&#10003; Lawn free seating</li>
+                        </ul>
+
+                        <p class="answer-heading">Picnic Stand South (30 &dollar;)</p>
+                        <p class="details">Details :</p>
+                        <ul>
+                            <li>&#10003; Valid for all tree days of the event</li>
+                            <li>&#10003; Access to MotoGP, Moto 2, Moto 3 races</li>
+                            <li>&#10003; Lawn free seating</li>
+                        </ul>
+
+                        <button class="btnforbooking" data-rate="30$" id="openPopupButton">Book your 30 $ seat</button>
+
+                    </div>
+                </div>
+
+                <div class="menu">
+                    <div class="faq-question">
+                        <span>72 &dollar;</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="answer-heading" >Star Stand 1 East (72 &dollar;)</p>
+                        <p class="details">Details :</p>
+                        <ul>
+                            <li>&#10003; Valid for all tree days of the event</li>
+                            <li>&#10003; free Seating</li>
+                            <li>&#10003; Access to MotoGP, Moto 2, Moto 3 races</li>
+                            <li>&#10003; Veiw of the bikes at the fastest speed on the &nbsp;&nbsp;&nbsp;&nbsp;longent straight of race</li>
+                        </ul>
+
+                        <p class="answer-heading">Star Stand 3 East (72 &dollar;)</p>
+                        <p class="details">Details :</p>
+                        <ul>
+                            <li>&#10003; Valid for all tree days of the event</li>
+                            <li>&#10003; free Seating</li>
+                            <li>&#10003; Access to MotoGP, Moto 2, Moto 3 races</li>
+                        </ul>
+
+                        <p class="answer-heading">Classic Stand 2 East (72 &dollar;)</p>
+                        <p class="details">Details :</p>
+                        <ul>
+                            <li>&#10003; Valid for all tree days of the event</li>
+                            <li>&#10003; free Seating</li>
+                            <li>&#10003; Access to MotoGP, Moto 2, Moto 3 races</li>
+                        </ul>
+
+                        <p class="answer-heading">Classic Stand 1 West (72 &dollar;)</p>
+                        <p class="details">Details :</p>
+                        <ul>
+                            <li>&#10003; Valid for all tree days of the event</li>
+                            <li>&#10003; free Seating</li>
+                            <li>&#10003; Access to MotoGP, Moto 2, Moto 3 races</li>
+                        </ul>
+
+                        <button class="btnforbooking" data-rate="72$" id="openPopupButton">Book your 72 $ seat</button>
+
+                    </div>
+                </div>
+
+                <div class="menu">
+                    <div class="faq-question">
+                        <span>96 &dollar;</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="answer-heading" >Star Stand 2 East (96 &dollar; )</p>
+                        <p class="details">Details :</p>
+                        <ul>
+                            <li>&#10003; Valid for all three days of the event</li>
+                            <li>&#10003; Free Seating</li>
+                            <li>&#10003; Access to MotoGP, Moto2, Moto 3 Races</li>
+                            <li>&#10003; Direct front view of the longest straight of the &nbsp;&nbsp;&nbsp;&nbsp; race</li>
+                            <li>&#10003; View of the bikes at their fastest speed</li>
+                        </ul>
+
+                        <p class="answer-heading">Classic Stand 2 West (96 &dollar; )</p>
+                        <p class="details">Details :</p>
+                        <ul>
+                            <li>&#10003; Valid for all three days of the event</li>
+                            <li>&#10003; Free Seating</li>
+                            <li>&#10003; Access to MotoGP, Moto2, Moto 3 Races</li>
+                            <li>&#10003; Easy access to MotoGP Fanzone</li>
+                        </ul>
+
+                        <button class="btnforbooking" data-rate="96$" id="openPopupButton">Book your 96 $ seat</button>
+                    </div>
+                </div>
+
+                <div class="menu">
+                    <div class="faq-question">
+                        <span>120 &dollar;</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="answer-heading">Premium Stand South (120 &dollar; )</p>
+                        <p class="details">Details :</p>
+                        <ul>
+                            <li>&#10003; Valid for all three days of the event</li>
+                            <li>&#10003; Premium seating with shade</li>
+                            <li>&#10003; Access to MotoGP, Moto2, Moto 3 Races</li>
+                            <li>&#10003; Easy access to MotoGP Fanzone</li>
+                        </ul>
+
+                        <button class="btnforbooking" data-rate="120$" id="openPopupButton">Book your 120 $ seat</button>
+                    </div>
+                </div>
+
+                <div class="menu">
+                    <div class="faq-question">
+                        <span>144 &dollar;</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="answer-heading">Classic Stand North (144 &dollar;)</p>
+                        <p class="details">Details :</p>
+                        <ul>
+                            <li>&#10003; Valid for all three days of the event</li>
+                            <li>&#10003; Free seating</li>
+                            <li>&#10003; Access to MotoGP, Moto2, Moto 3 Races</li>
+                            <li>&#10003; View of turn one from distance</li>
+                            <li>&#10003; View of the most aggressive turn on the circuit</li>
+                        </ul>
+
+                        <button class="btnforbooking" data-rate="144$" id="openPopupButton">Book your 144 $ seat</button>
+                    </div>
+                </div>
+
+                <div class="menu">
+                    <div class="faq-question">
+                        <span>180 &dollar;</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="answer-heading">Premium Stand North (180 &dollar;)</p>
+                        <p class="details">Details :</p>
+                        <ul>
+                            <li>&#10003; Valid for all three days of the event</li>
+                            <li>&#10003; Free seating</li>
+                            <li>&#10003; Premium seating with shade</li>
+                            <li>&#10003; Access to MotoGP, Moto2, Moto 3 Races</li>
+                            <li>&#10003; Direct view of race start and turn 1 of the race</li>
+                            <li>&#10003; Easy access to MotoGP Fanzone</li>
+                        </ul>
+
+                        <button class="btnforbooking" data-rate="180$" id="openPopupButton">Book your 180 $ seat</button>
+                    </div>
+                </div>
+
+                <div class="menu">
+                    <div class="faq-question">
+                        <span>240 &dollar;</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="answer-heading">MGS Upper Tier Block A (240 &dollar;)</p>
+                        <p class="details">Details :</p>
+                        <ul>
+                            <li>&#10003; Main Grandstand Upper Tier</li>
+                            <li>&#10003; We are 93 Grnadstand - Official Marc Marquez &nbsp;&nbsp;&nbsp;&nbsp;Fanclub</li>
+                            <li>&#10003; Valid for all three days of the event</li>
+                            <li>&#10003; Access to MotoGP, Moto2, Moto 3 Races</li>
+                            <li>&#10003; Upper-level seating with finish line view. <br>&nbsp;&nbsp;&nbsp; Premium seating with shade</li>
+                            <li>&#10003; Easy access to MotoGP Fanzone</li>
+                        </ul>
+
+                        <p class="answer-heading">MGS Upper Tier Block B (240 &dollar;)</p>
+                        <p class="details">Details :</p>
+                        <ul>
+                            <li>&#10003; Main Grandstand Upper Tier</li>
+                            <li>&#10003; We are 93 Grnadstand - Official Marc Marquez &nbsp;&nbsp;&nbsp;&nbsp;Fanclub</li>
+                            <li>&#10003; Valid for all three days of the event</li>
+                            <li>&#10003; Access to MotoGP, Moto2, Moto 3 Races</li>
+                            <li>&#10003; Upper-level seating with finish line view. <br>&nbsp;&nbsp;&nbsp; Premium seating with shade</li>
+                            <li>&#10003; Easy access to MotoGP Fanzone</li>
+                        </ul>
+
+                        <p class="answer-heading">MGS Upper Tier Block C (240 &dollar;)</p>
+                        <p class="details">Details :</p>
+                        <ul>
+                            <li>&#10003; Main Grandstand Upper Tier</li>
+                            <li>&#10003; We are 93 Grnadstand - Official Marc Marquez &nbsp;&nbsp;&nbsp;&nbsp;Fanclub</li>
+                            <li>&#10003; Valid for all three days of the event</li>
+                            <li>&#10003; Access to MotoGP, Moto2, Moto 3 Races</li>
+                            <li>&#10003; Upper-level seating with finish line view. <br>&nbsp;&nbsp;&nbsp; Premium seating with shade</li>
+                            <li>&#10003; Easy access to MotoGP Fanzone</li>
+                        </ul>
+
+                        <p class="answer-heading">MGS Upper Tier Block D (240 &dollar;)</p>
+                        <p class="details">Details :</p>
+                        <ul>
+                            <li>&#10003; Main Grandstand Upper Tier</li>
+                            <li>&#10003; We are 93 Grnadstand - Official Marc Marquez &nbsp;&nbsp;&nbsp;&nbsp;Fanclub</li>
+                            <li>&#10003; Valid for all three days of the event</li>
+                            <li>&#10003; Access to MotoGP, Moto2, Moto 3 Races</li>
+                            <li>&#10003; Upper-level seating with finish line view. <br>&nbsp;&nbsp;&nbsp; Premium seating with shade</li>
+                            <li>&#10003; Easy access to MotoGP Fanzone</li>
+                        </ul>
+
+                        <p class="answer-heading">MGS Upper Tier Block E (240 &dollar;)</p>
+                        <p class="details">Details :</p>
+                        <ul>
+                            <li>&#10003; Main Grandstand Upper Tier</li>
+                            <li>&#10003; We are 93 Grnadstand - Official Marc Marquez &nbsp;&nbsp;&nbsp;&nbsp;Fanclub</li>
+                            <li>&#10003; Valid for all three days of the event</li>
+                            <li>&#10003; Access to MotoGP, Moto2, Moto 3 Races</li>
+                            <li>&#10003; Upper-level seating with finish line view. <br>&nbsp;&nbsp;&nbsp; Premium seating with shade</li>
+                            <li>&#10003; Easy access to MotoGP Fanzone</li>
+                        </ul>
+
+                        <p class="answer-heading">MGS Upper Tier Block F (240 &dollar;)</p>
+                        <p class="details">Details :</p>
+                        <ul>
+                            <li>&#10003; Main Grandstand Upper Tier</li>
+                            <li>&#10003; Valid for all three days of the event</li>
+                            <li>&#10003; Access to MotoGP, Moto2, Moto 3 Races</li>
+                            <li>&#10003; View of the starting grid of the race</li>
+                            <li>&#10003; Premium seating with shade</li>
+                            <li>&#10003; Easy access to MotoGP Fanzone</li>
+                        </ul>
+
+                        <p class="answer-heading">MGS Upper Tier Block G (240 &dollar;)</p>
+                        <p class="details">Details :</p>
+                        <ul>
+                            <li>&#10003; Main Grandstand Upper Tier</li>
+                            <li>&#10003; Valid for all three days of the event</li>
+                            <li>&#10003; Access to MotoGP, Moto2, Moto 3 Races</li>
+                            <li>&#10003; View of the starting grid of the race</li>
+                            <li>&#10003; Premium seating with shade</li>
+                            <li>&#10003; Easy access to MotoGP Fanzone</li>
+                        </ul>
+
+                        <p class="answer-heading">MGS Upper Tier Block H (240 &dollar;)</p>
+                        <p class="details">Details :</p>
+                        <ul>
+                            <li>&#10003; Main Grandstand Upper Tier</li>
+                            <li>&#10003; Valid for all three days of the event</li>
+                            <li>&#10003; Access to MotoGP, Moto2, Moto 3 Races</li>
+                            <li>&#10003; View of the starting grid of the race</li>
+                            <li>&#10003; Premium seating with shade</li>
+                            <li>&#10003; Easy access to MotoGP Fanzone</li>
+                        </ul>
+
+                        <p class="answer-heading">MGS Upper Tier Block I (240 &dollar;)</p>
+                        <p class="details">Details :</p>
+                        <ul>
+                            <li>&#10003; Main Grandstand Upper Tier</li>
+                            <li>&#10003; Valid for all three days of the event</li>
+                            <li>&#10003; Access to MotoGP, Moto2, Moto 3 Races</li>
+                            <li>&#10003; View of the starting grid of the race</li>
+                            <li>&#10003; Premium seating with shade</li>
+                            <li>&#10003; Easy access to MotoGP Fanzone</li>
+                        </ul>
+
+                        <p class="answer-heading">MGS Upper Tier Block J (240 &dollar;)</p>
+                        <p class="details">Details :</p>
+                        <ul>
+                            <li>&#10003; Main Grandstand Upper Tier</li>
+                            <li>&#10003; Valid for all three days of the event</li>
+                            <li>&#10003; Access to MotoGP, Moto2, Moto 3 Races</li>
+                            <li>&#10003; View of the starting grid of the race</li>
+                            <li>&#10003; Premium seating with shade</li>
+                            <li>&#10003; Easy access to MotoGP Fanzone</li>
+                        </ul>
+
+                        <p class="answer-heading">MGS Upper Tier Block K (240 &dollar;)</p>
+                        <p class="details">Details :</p>
+                        <ul>
+                            <li>&#10003; Main Grandstand Upper Tier</li>
+                            <li>&#10003; Valid for all three days of the event</li>
+                            <li>&#10003; Access to MotoGP, Moto2, Moto 3 Races</li>
+                            <li>&#10003; View of the starting grid of the race</li>
+                            <li>&#10003; Premium seating with shade</li>
+                            <li>&#10003; Easy access to MotoGP Fanzone</li>
+                        </ul>
+
+                        <p class="answer-heading">MGS Upper Tier Block L (240 &dollar;)</p>
+                        <p class="details">Details :</p>
+                        <ul>
+                            <li>&#10003; Main Grandstand Upper Tier</li>
+                            <li>&#10003; Valid for all three days of the event</li>
+                            <li>&#10003; Access to MotoGP, Moto2, Moto 3 Races</li>
+                            <li>&#10003; View of the starting grid of the race</li>
+                            <li>&#10003; Premium seating with shade</li>
+                            <li>&#10003; Easy access to MotoGP Fanzone</li>
+                        </ul>
+
+                        <p class="answer-heading">MGS Upper Tier Block M (240 &dollar;)</p>
+                        <p class="details">Details :</p>
+                        <ul>
+                            <li>&#10003; Main Grandstand Upper Tier</li>
+                            <li>&#10003; Valid for all three days of the event</li>
+                            <li>&#10003; Access to MotoGP, Moto2, Moto 3 Races</li>
+                            <li>&#10003; View of the starting grid of the race</li>
+                            <li>&#10003; Premium seating with shade</li>
+                            <li>&#10003; Easy access to MotoGP Fanzone</li>
+                        </ul>
+
+                        <p class="answer-heading">MGS Upper Tier Block N (240 &dollar;)</p>
+                        <p class="details">Details :</p>
+                        <ul>
+                            <li>&#10003; Main Grandstand Upper Tier</li>
+                            <li>&#10003; Valid for all three days of the event</li>
+                            <li>&#10003; Access to MotoGP, Moto2, Moto 3 Races</li>
+                            <li>&#10003; View of the starting grid of the race</li>
+                            <li>&#10003; Premium seating with shade</li>
+                            <li>&#10003; Easy access to MotoGP Fanzone</li>
+                        </ul>
+
+                        <p class="answer-heading">MGS Upper Tier Block O (240 &dollar;)</p>
+                        <p class="details">Details :</p>
+                        <ul>
+                            <li>&#10003; Main Grandstand Upper Tier</li>
+                            <li>&#10003; Valid for all three days of the event</li>
+                            <li>&#10003; Access to MotoGP, Moto2, Moto 3 Races</li>
+                            <li>&#10003; View of the starting grid of the race</li>
+                            <li>&#10003; Premium seating with shade</li>
+                            <li>&#10003; Easy access to MotoGP Fanzone</li>
+                        </ul>
+
+                        <p class="answer-heading">MGS Upper Tier Block P (240 &dollar;)</p>
+                        <p class="details">Details :</p>
+                        <ul>
+                            <li>&#10003; Main Grandstand Upper Tier</li>
+                            <li>&#10003; Valid for all three days of the event</li>
+                            <li>&#10003; Access to MotoGP, Moto2, Moto 3 Races</li>
+                            <li>&#10003; View of the starting grid of the race</li>
+                            <li>&#10003; Premium seating with shade</li>
+                            <li>&#10003; Easy access to MotoGP Fanzone</li>
+                        </ul>
+
+                        <p class="answer-heading">MGS Upper Tier Block W (240 &dollar;)</p>
+                        <p class="details">Details :</p>
+                        <ul>
+                            <li>&#10003; Main Grandstand Upper Tier</li>
+                            <li>&#10003; Valid for all three days of the event</li>
+                            <li>&#10003; Access to MotoGP, Moto2, Moto 3 Races</li>
+                            <li>&#10003; View of the starting grid of the race</li>
+                            <li>&#10003; Premium seating with shade</li>
+                            <li>&#10003; Easy access to MotoGP Fanzone</li>
+                        </ul>
+
+                        <p class="answer-heading">MGS Upper Tier Block X (240 &dollar;)</p>
+                        <p class="details">Details :</p>
+                        <ul>
+                            <li>&#10003; Main Grandstand Upper Tier</li>
+                            <li>&#10003; Valid for all three days of the event</li>
+                            <li>&#10003; Access to MotoGP, Moto2, Moto 3 Races</li>
+                            <li>&#10003; View of the starting grid of the race</li>
+                            <li>&#10003; Premium seating with shade</li>
+                            <li>&#10003; Easy access to MotoGP Fanzone</li>
+                        </ul>
+
+                        <p class="answer-heading">MGS Upper Tier Block Y (240 &dollar;)</p>
+                        <p class="details">Details :</p>
+                        <ul>
+                            <li>&#10003; Main Grandstand Upper Tier</li>
+                            <li>&#10003; Valid for all three days of the event</li>
+                            <li>&#10003; Access to MotoGP, Moto2, Moto 3 Races</li>
+                            <li>&#10003; View of the starting grid of the race</li>
+                            <li>&#10003; Premium seating with shade</li>
+                            <li>&#10003; Easy access to MotoGP Fanzone</li>
+                        </ul>
+
+                        <p class="answer-heading">MGS Upper Tier Block Z (240 &dollar;)</p>
+                        <p class="details">Details :</p>
+                        <ul>
+                            <li>&#10003; Main Grandstand Upper Tier</li>
+                            <li>&#10003; Valid for all three days of the event</li>
+                            <li>&#10003; Access to MotoGP, Moto2, Moto 3 Races</li>
+                            <li>&#10003; View of the starting grid of the race</li>
+                            <li>&#10003; Premium seating with shade</li>
+                            <li>&#10003; Easy access to MotoGP Fanzone</li>
+                        </ul>
+
+                        <p class="answer-heading">MGS Upper Tier Block AA (&dollar; 240.00 )</p>
+                        <p class="details">Details :</p>
+                        <ul>
+                            <li>&#10003; Main Grandstand Upper Tier</li>
+                            <li>&#10003; Valid for all three days of the event</li>
+                            <li>&#10003; Access to MotoGP, Moto2, Moto 3 Races</li>
+                            <li>&#10003; View of the starting grid of the race</li>
+                            <li>&#10003; Premium seating with shade</li>
+                            <li>&#10003; Easy access to MotoGP Fanzone</li>
+                        </ul>
+
+                        <p class="answer-heading">MGS Upper Tier Block AB (240 &dollar;)</p>
+                        <p class="details">Details :</p>
+                        <ul>
+                            <li>&#10003; Main Grandstand Upper Tier</li>
+                            <li>&#10003; Valid for all three days of the event</li>
+                            <li>&#10003; Access to MotoGP, Moto2, Moto 3 Races</li>
+                            <li>&#10003; View of the starting grid of the race</li>
+                            <li>&#10003; Premium seating with shade</li>
+                            <li>&#10003; Easy access to MotoGP Fanzone</li>
+                        </ul>
+
+                        <p class="answer-heading">MGS Upper Tier Block AC (240 &dollar;)</p>
+                        <p class="details">Details :</p>
+                        <ul>
+                            <li>&#10003; Main Grandstand Upper Tier</li>
+                            <li>&#10003; Valid for all three days of the event</li>
+                            <li>&#10003; Access to MotoGP, Moto2, Moto 3 Races</li>
+                            <li>&#10003; View of the starting grid of the race</li>
+                            <li>&#10003; Premium seating with shade</li>
+                            <li>&#10003; Easy access to MotoGP Fanzone</li>
+                        </ul>
+
+                        <p class="answer-heading">MGS Upper Tier Block AD (240 &dollar;)</p>
+                        <p class="details">Details :</p>
+                        <ul>
+                            <li>&#10003; Main Grandstand Upper Tier</li>
+                            <li>&#10003; Valid for all three days of the event</li>
+                            <li>&#10003; Access to MotoGP, Moto2, Moto 3 Races</li>
+                            <li>&#10003; View of the starting grid of the race</li>
+                            <li>&#10003; Premium seating with shade</li>
+                            <li>&#10003; Easy access to MotoGP Fanzone</li>
+                        </ul>
+
+                        <button class="btnforbooking" data-rate="240$" id="openPopupButton">Book your 240 $ seat</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="map-image">
+            <img src="~/Content/img/track1.png" alt="Track"/>
+        </div>
+    </div>
+
+</div>
+ 
